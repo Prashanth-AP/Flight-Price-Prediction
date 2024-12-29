@@ -1,0 +1,23 @@
+[ 2024-12-29 21:43:38,301 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2024-12-29 21:43:40,323 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-29 21:43:40,323 ] 97 werkzeug - INFO -  * Debugger PIN: 668-754-183
+[ 2024-12-29 21:43:53,578 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:43:53] "GET /predict HTTP/1.1" 200 -
+[ 2024-12-29 21:43:57,878 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:43:57] "GET / HTTP/1.1" 200 -
+[ 2024-12-29 21:43:58,715 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:43:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-12-29 22:29:21,960 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:21] "GET /predict HTTP/1.1" 200 -
+[ 2024-12-29 22:29:54,144 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-12-29 22:29:54,358 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:54] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:29:54,432 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:54] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:29:54,497 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:54] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:29:54,529 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:29:54] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:34:46,042 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:34:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-12-29 22:34:46,081 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:34:46] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:34:46,086 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:34:46] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:34:46,117 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:34:46] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:34:46,133 ] 97 werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:34:46] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-12-29 22:35:11,067 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\components\\data_transformation.py', reloading
+[ 2024-12-29 22:35:11,068 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\components\\data_transformation.py', reloading
+[ 2024-12-29 22:35:11,068 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\components\\model_trainer.py', reloading
+[ 2024-12-29 22:35:11,068 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\components\\model_trainer.py', reloading
+[ 2024-12-29 22:35:11,070 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\utils.py', reloading
+[ 2024-12-29 22:35:11,071 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\utils.py', reloading
