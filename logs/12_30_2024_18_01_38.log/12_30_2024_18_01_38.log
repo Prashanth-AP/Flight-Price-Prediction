@@ -1,0 +1,26 @@
+[ 2024-12-30 18:01:39,246 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2024-12-30 18:01:41,565 ] 26 root - INFO - Data Ingestion method starts
+[ 2024-12-30 18:01:41,586 ] 30 root - INFO - Dataset read as pandas Dataframe
+[ 2024-12-30 18:01:41,617 ] 35 root - INFO - Raw data is created
+[ 2024-12-30 18:01:41,648 ] 42 root - INFO - Ingestion of Data is completed!
+[ 2024-12-30 18:01:41,690 ] 88 root - INFO - Read train and test data completed
+[ 2024-12-30 18:01:41,690 ] 89 root - INFO - Train Dataframe Head : 
+   Unnamed: 0            Airline   Source Destination Total_Stops  Price  Date  Month
+0        5050          Air India  Kolkata    Banglore     3 stops   8607     1      4
+1        4879  Multiple carriers    Delhi      Cochin      1 stop  13587     1      6
+2         208        Jet Airways  Kolkata    Banglore      1 stop  10844    21      5
+3        8561  Multiple carriers    Delhi      Cochin      1 stop  13377     9      6
+4        7265             IndiGo  Kolkata    Banglore    non-stop   4148    21      3
+[ 2024-12-30 18:01:41,697 ] 90 root - INFO - Test Dataframe Head  : 
+   Unnamed: 0      Airline    Source Destination Total_Stops  Price  Date  Month
+0        2150  Jet Airways  Banglore   New Delhi      1 stop  17996     6      3
+1        3784     SpiceJet   Kolkata    Banglore    non-stop   3873     6      6
+2         714       IndiGo   Kolkata    Banglore    non-stop   4462    18      3
+3        7558  Jet Airways    Mumbai   Hyderabad    non-stop   2228    24      3
+4        7413     SpiceJet  Banglore       Delhi    non-stop   4991    27      4
+[ 2024-12-30 18:01:41,698 ] 92 root - INFO - Obtaining preprocessing object
+[ 2024-12-30 18:01:41,698 ] 33 root - INFO - Data transformation initiated
+[ 2024-12-30 18:01:41,698 ] 46 root - INFO - Data transformation pipeline initiated
+[ 2024-12-30 18:01:41,698 ] 74 root - INFO - Data transformation pipeline completed
+[ 2024-12-30 18:01:41,733 ] 117 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-12-30 18:01:41,733 ] 129 root - INFO - Preprocessor pickle file saved

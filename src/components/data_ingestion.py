@@ -26,7 +26,7 @@ class DataIngestion:
         logging.info('Data Ingestion method starts')
 
         try:
-            df=pd.read_excel(os.path.join('notebooks/data','flight_price (2).xlsx'))                   #Read the original data
+            df=pd.read_csv(os.path.join('notebooks/data','cleaned_data2.csv'))                   #Read the original data
             logging.info('Dataset read as pandas Dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
