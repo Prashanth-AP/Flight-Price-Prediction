@@ -1,101 +1,75 @@
-# import sys
-# import os
-# from src.exception import CustomException
-# from src.logger import logging
-# from src.utils import load_object
-# import pandas as pd
+import sys
+import os
+from src.exception import CustomException
+from src.logger import logging
+from src.utils import load_object
+import pandas as pd
 
-# class PredictPipeline:
-#     def __init__(self):
-#         pass
+class PredictPipeline:
+    def __init__(self):
+        pass
 
-#     def predict(self,features):
-#         try:
-#             preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-#             model_path=os.path.join('artifacts','model.pkl')
+    def predict(self,features):
+        try:
+            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
+            model_path=os.path.join('artifacts','model.pkl')
 
-#             preprocessor=load_object(preprocessor_path)
-#             model=load_object(model_path)
+            preprocessor=load_object(preprocessor_path)
+            model=load_object(model_path)
 
-#             data_scaled=preprocessor.transform(features)
+            data_scaled=preprocessor.transform(features)
 
-#             pred=model.predict(data_scaled)
-#             return pred
+            pred=model.predict(data_scaled)
+            return pred
             
 
-#         except Exception as e:
-#             logging.info("Exception occured in prediction")
-#             raise CustomException(e,sys)
+        except Exception as e:
+            logging.info("Exception occured in prediction")
+            raise CustomException(e,sys)
+        
+        #Airline	Source	Destination	Total_Stops	Price	Date	Month
         
 
 
 
-# class CustomData:
-#     def __init__(self,Price:float,
-#                  journey_day:int,
-#                  journey_month:int,
-#                  Airline:str,
-#                  Source:str,
-#                  Destination:str,
-#                  Total_Stops:str):
+class CustomData:
+    def __init__(self,
+                 Airline:str,
+                 Source:str,
+                 Destination:str,
+                 Total_Stops:str,
+                 Date:int,
+                 Month:int):
                  
         
-#      self.Price=Price
-#      self.journey_day=journey_day
-#      self.journey_month=journey_month
-   
-#      self.Airline=Airline
-#      self.Source=Source
-#      self.Destination=Destination
-#      self.Total_Stops=Total_Stops
+     
+     self.Airline=Airline
+     self.Source=Source
+     self.Destination=Destination
+     self.Total_Stops=Total_Stops
+     self.Date=Date
+     self.Month=Month
     
     
         
 
-#     def get_data_as_dataframe(self):
-#         try:
-#             custom_data_input_dict = {
-#                 'Price':[self.Price],
-#                 'journey_day':[self.journey_day],
-#                 'journey_month':[self.journey_month],
+    def get_data_as_dataframe(self):
+        try:
+            custom_data_input_dict = {
                 
-#                 'Airline':[self.Airline],
-#                 'Source':[self.Source],
-#                 'Destination':[self.Destination],
-#                 'Total_Stops':[self.Total_Stops]
-#             }
-#             df = pd.DataFrame(custom_data_input_dict)
-#             logging.info('Dataframe Gathered')
-#             return df
-#         except Exception as e:
-#             logging.info('Exception Occured in prediction pipeline')
-#             raise CustomException(e,sys)
+                'Airline':[self.Airline],
+                'Source':[self.Source],
+                'Destination':[self.Destination],
+                'Total_Stops':[self.Total_Stops],
+                'Date':[self.Date],
+                'Month':[self.Month]
+            }
+            df = pd.DataFrame(custom_data_input_dict)
+            logging.info('Dataframe Gathered')
+            return df
+        except Exception as e:
+            logging.info('Exception Occured in prediction pipeline')
+            raise CustomException(e,sys)
    
 
 
-#  Dep_Time_hour:float,
-                #  Dep_Time_minute:float,
-                #  Arrival_Time_hour:float,
-                #  Arrival_Time_minute:float,
-                #  dur_hour:float,
-                #  dur_min:float,
-
-
-                 #  self.Dep_Time_hour=Dep_Time_hour
-    #  self.Dep_Time_minute=Dep_Time_minute
-    #  self.Arrival_Time_hour=Arrival_Time_hour
-    #  self.Arrival_Time_minute=Arrival_Time_minute
-    #  self.dur_hour=dur_hour
-    #  self.dur_min=dur_min
-
-
-    # 'Dep_Time_hour':[self.Dep_Time_hour],
-                # 'Dep_Time_minute':[self.Dep_Time_minute],
-                # 'Arrival_Time_hour':[self.Arrival_Time_hour],
-                # 'Arrival_Time_minute':[self.Arrival_Time_minute],
-                # 'dur_hour':[self.dur_hour],
-                # 'dur_min':[self.dur_min],
-
-
-   
-    

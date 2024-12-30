@@ -1,101 +1,157 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction Form</title>
+    <title>Flight Price Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
+            background-color: #f8f9fa;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
         }
         .container {
             max-width: 600px;
-            margin: 50px auto;
-            background: white;
+            margin-top: 50px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        h1 {
+        .header-image {
             text-align: center;
-            color: #333;
+            margin-bottom: 20px;
         }
-        .form-group {
-            margin-bottom: 15px;
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .result {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 18px;
-            color: #007bff;
+        .form-title {
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Prediction Form</h1>
-        <form method="POST" action="/predict">
-            <div class="form-group">
-                <label for="journey_month">Journey Month</label>
-                <input type="number" id="journey_month" name="journey_month" required>
-            </div>
-            <div class="form-group">
-                <label for="journey_day">Journey Day</label>
-                <input type="number" id="journey_day" name="journey_day" required>
-            </div>
-            <div class="form-group">
-                <label for="Airline">Airline</label>
-                <input type="text" id="Airline" name="Airline" required>
-            </div>
-            <div class="form-group">
-                <label for="Source">Source</label>
-                <input type="text" id="Source" name="Source" required>
-            </div>
-            <div class="form-group">
-                <label for="Destination">Destination</label>
-                <input type="text" id="Destination" name="Destination" required>
-            </div>
-            <div class="form-group">
-                <label for="Total_Stops">Total Stops</label>
-                <input type="number" id="Total_Stops" name="Total_Stops" required>
-            </div>
-            <button type="submit">Predict</button>
-        </form>
 
-        {% if final_result is not none %}
-        <div class="result">
-            <p>Prediction Result: {{ final_result }}</p>
+    <div class="container">
+        <!-- Flight Image -->
+        <div class="header-image">
+            <img src="https://via.placeholder.com/600x200?text=Book+Your+Flight+Now" alt="Flight Image">
         </div>
-        {% endif %}
+    
+    <!-- Form Title -->
+    <h2 class="text-center form-title">Flight Price Prediction</h2>
+    
+    <form action="{{ url_for('predict_datapoint') }}" method="POST">
+        <!-- Date and Month -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Date">Date:</label>
+                <select class="form-control" id="Date" name="Date"></select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Month">Month:</label>
+                <select class="form-control" id="Month" name="Month"></select>
+            </div>
+        </div>
+
+        <!-- Airline Selection -->
+        <div class="form-group">
+            <label for="Airline">Airline:</label>
+            <select class="form-control" id="Airline" name="Airline">
+                <option value="IndiGo">IndiGo</option>
+                <option value="Air India">Air India</option>
+                <option value="Jet Airways">Jet Airways</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Multiple carriers">Multiple carriers</option>
+                <option value="GoAir">GoAir</option>
+                <option value="Vistara">Vistara</option>
+                <option value="Air Asia">Air Asia</option>
+                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                <option value="Trujet">Trujet</option>
+                <option value="Jet Airways Business">Jet Airways Business</option>
+                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+            </select>
+        </div>
+
+        <!-- Source and Destination -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Source">Source:</label>
+                <select class="form-control" id="Source" name="Source">
+                    <option value="Banglore">Banglore</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Destination">Destination:</label>
+                <select class="form-control" id="Destination" name="Destination">
+                    <option value="Banglore">Banglore</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Cochin">Cochin</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Total Stops -->
+        <div class="form-group">
+            <label for="Total_Stops">Total Stops:</label>
+            <select class="form-control" id="Total_Stops" name="Total_Stops">
+                <option value="non-stop">non-stop</option>
+                <option value="2 stops">2 stops</option>
+                <option value="1 stop">1 stop</option>
+                <option value="3 stops">3 stops</option>
+                <option value="4 stops">4 stops</option>
+            </select>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+    
+    <!-- Display Prediction -->
+    <div class="mt-3">
+        <h5 class="text-center">{{ final_result }} price</h5>
     </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Populate date dropdown (1–31)
+    const dateSelect = document.getElementById("Date");
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        dateSelect.appendChild(option);
+    }
+
+    // Populate month dropdown (1–12)
+    const monthSelect = document.getElementById("Month");
+    for (let i = 1; i <= 12; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        monthSelect.appendChild(option);
+    }
+</script>
+
 </body>
-</html> -->
+</html>
+
+
+
+
 
