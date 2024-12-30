@@ -94,7 +94,7 @@ class DataTransformation:
             preprocessing_obj = self.get_data_transformation_obj()  #to get the preprocessing object file
 
             target_column_name = 'Price'
-            drop_columns = [target_column_name,'Unnamed: 0']     ###@@@
+            drop_columns = [target_column_name,'Unnamed: 0']  
 
             ## Dividing the dataset into independent and dependent features
 

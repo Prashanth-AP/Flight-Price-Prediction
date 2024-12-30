@@ -12,15 +12,7 @@
 #     def predict(self,features):
 #         try:
 #             preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-#             model_path=os.path.join('artifacts','best_model.pkl')
-
-#              # Check if the preprocessor file exists
-#             if not os.path.exists(preprocessor_path):
-#                 raise FileNotFoundError("Preprocessor file not found in artifacts directory.")
-
-#             # Check if the model file exists
-#             if not os.path.exists(model_path):
-#                 raise FileNotFoundError("Model file not found in artifacts directory.")
+#             model_path=os.path.join('artifacts','model.pkl')
 
 #             preprocessor=load_object(preprocessor_path)
 #             model=load_object(model_path)
@@ -42,7 +34,6 @@
 #     def __init__(self,Price:float,
 #                  journey_day:int,
 #                  journey_month:int,
-                
 #                  Airline:str,
 #                  Source:str,
 #                  Destination:str,
