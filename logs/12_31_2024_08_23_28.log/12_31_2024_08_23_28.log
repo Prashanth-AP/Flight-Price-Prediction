@@ -1,3 +1,10 @@
 [ 2024-12-31 08:23:28,707 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
 [ 2024-12-31 08:23:30,091 ] 97 werkzeug - WARNING -  * Debugger is active!
 [ 2024-12-31 08:23:30,091 ] 97 werkzeug - INFO -  * Debugger PIN: 668-754-183
+[ 2024-12-31 08:28:11,001 ] 97 werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 08:28:11] "GET /predict HTTP/1.1" 200 -
+[ 2024-12-31 08:28:12,590 ] 97 werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 08:28:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-12-31 08:30:13,261 ] 97 werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 08:30:13] "GET /predict HTTP/1.1" 200 -
+[ 2024-12-31 08:30:27,557 ] 68 root - INFO - Dataframe Gathered
+[ 2024-12-31 08:30:28,002 ] 97 werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 08:30:28] "POST /predict HTTP/1.1" 200 -
+[ 2024-12-31 08:33:02,096 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\api\\index.py', reloading
+[ 2024-12-31 08:33:02,096 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\api\\index.py', reloading
