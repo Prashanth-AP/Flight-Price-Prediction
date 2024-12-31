@@ -1,0 +1,11 @@
+[ 2024-12-31 08:20:42,207 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2024-12-31 08:20:47,212 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-31 08:20:47,212 ] 97 werkzeug - INFO -  * Debugger PIN: 668-754-183
+[ 2024-12-31 08:20:47,992 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\exception.py', reloading
+[ 2024-12-31 08:20:47,993 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\exception.py', reloading
+[ 2024-12-31 08:20:48,016 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\logger.py', reloading
+[ 2024-12-31 08:20:48,017 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\logger.py', reloading
+[ 2024-12-31 08:20:48,135 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\components\\data_ingestion.py', reloading
+[ 2024-12-31 08:20:48,135 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\components\\data_ingestion.py', reloading
+[ 2024-12-31 08:20:48,160 ] 97 werkzeug - INFO -  * Detected change in 'c:\\internship\\flightpriceprediction\\src\\components\\data_transformation.py', reloading
+[ 2024-12-31 08:20:48,160 ] 97 werkzeug - INFO -  * Detected change in 'C:\\internship\\flightpriceprediction\\src\\components\\data_transformation.py', reloading
