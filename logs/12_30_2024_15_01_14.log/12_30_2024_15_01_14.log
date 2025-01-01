@@ -1,5 +1,0 @@
-[ 2024-12-30 15:01:15,400 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
-[ 2024-12-30 15:01:17,461 ] 26 root - INFO - Data Ingestion method starts
-[ 2024-12-30 15:01:20,195 ] 30 root - INFO - Dataset read as pandas Dataframe
-[ 2024-12-30 15:01:20,243 ] 35 root - INFO - Raw data is created
-[ 2024-12-30 15:01:20,326 ] 42 root - INFO - Ingestion of Data is completed!
